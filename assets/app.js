@@ -1,12 +1,12 @@
 const BRAND_LABELS={GE:"GE 医疗",SIEMENS:"西门子",PHILIPS:"飞利浦",UIH:"联影",CANON:"佳能"};
-const FIELD_LABELS={kv:"管电压 kV",ma:"管电流 mAs",rotation_time:"旋转时间 s",pitch:"螺距 Pitch",collimation:"准直器",slice_thickness:"重建层厚 mm",recon_interval:"重建间隔 mm",kernel:"重建核 Kernel",asir_v:"迭代重建/剂量"};
-const ORDER=["kv","ma","rotation_time","pitch","collimation","slice_thickness","recon_interval","kernel","asir_v"];
+const FIELD_LABELS={kv:"管电压 kV",ma:"管电流 mAs",rotation_time:"旋转时间 s",pitch:"螺距 Pitch",collimation:"准直器",slice_thickness:"重建层厚 mm",recon_interval:"重建间隔 mm",kernel:"重建核 Kernel",asir_v:"迭代重建/剂量",contrast_volume:"对比剂用量 Contrast Volume",flow_rate:"流速 Flow Rate",scan_time:"扫描时间 Scan Time s",ctdi_vol:"CTDIvol mGy",dlp:"DLP mGy·cm",recon_algo:"重建算法 Recon Algo"};
+const ORDER=["kv","ma","rotation_time","pitch","collimation","slice_thickness","recon_interval","kernel","asir_v","contrast_volume","flow_rate","scan_time","ctdi_vol","dlp","recon_algo"];
 let DATA=[],CUR=null,CAT="全部";
 const q=(s)=>document.querySelector(s);
 
 function esc(s){return String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
 
-fetch("data/scan_protocols_complete.json").then(r=>r.json()).then(d=>{
+fetch("data/scan_protocols_v2.json").then(r=>r.json()).then(d=>{
   DATA=d.protocols||[];
   renderCats();renderList();
   if(DATA[0])select(DATA[0].id);
