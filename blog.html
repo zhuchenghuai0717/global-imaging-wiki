@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技术文章 · CT 扫描协议与影像技术科普 | 全球影像协议库</title>
+<meta name="description" content="CT 扫描参数、跨品牌术语对照、冠脉 CTA、低剂量筛查与影像科研数据整理等技术文章，面向放射科技师与临床研究者，全部为公开资料整理的参考内容。">
+<meta name="keywords" content="CT扫描参数,CT参数对照,冠脉CTA,影像技师,医学影像科普,影像科研">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://zhuchenghuai0717.github.io/global-imaging-wiki/blog.html">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
+<link rel="stylesheet" href="assets/site.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="全球影像协议库">
+<meta property="og:title" content="技术文章 · CT 扫描协议与影像技术科普">
+<meta property="og:description" content="CT 参数、跨品牌术语对照、冠脉 CTA 与影像科研数据整理等技术文章。">
+<meta property="og:url" content="https://zhuchenghuai0717.github.io/global-imaging-wiki/blog.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23159aad'/><text x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='%2304121e'>影</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "全球影像协议库 · 技术文章",
+  "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog.html",
+  "inLanguage": "zh-CN",
+  "description": "跨品牌 CT 扫描协议与影像技术科普文章，面向放射科技师与临床研究者。",
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "CT 扫描参数怎么选：kV、mA、层厚、螺距一次讲清",
+      "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_01.html",
+      "datePublished": "2026-10-10",
+      "description": "影像技师入门必看：kV、mA、层厚、螺距、重建算法怎么选？一文讲清 CT 扫描参数对图像质量与辐射剂量的影响，附实用调节思路与参考值。"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GE / 西门子 / 飞利浦 / 联影 CT 参数术语对照表",
+      "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_02.html",
+      "datePublished": "2026-10-10",
+      "description": "换了品牌设备看不懂参数名？GE、西门子、飞利浦、联影 CT 参数术语对照表：管电流、自动毫安、迭代重建、准直宽度一一对应，跨品牌上机不再懵。"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "冠脉 CTA 扫描要点：心率、触发与重建期相全流程",
+      "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_03.html",
+      "datePublished": "2026-10-10",
+      "description": "冠脉 CTA 扫描全要点：检查前心率控制、屏气训练、对比剂注射方案、触发时机、心电门控与重建期相选择，影像技师实操参考。"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "影像技师职称考试备考攻略（初级师 / 主管技师）",
+      "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_04.html",
+      "datePublished": "2026-10-10",
+      "description": "关键词：影像技师职称考试, 放射技师考试备考Meta description：影像技师职称考试与放射技师考试备考攻略，覆盖初级师、主管技师考纲、高频考点、剂量对比剂复习与刷题方法。"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "低剂量肺癌筛查 CT 怎么扫：LDCT 协议与剂量控制",
+      "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_05.html",
+      "datePublished": "2026-10-10",
+      "description": "关键词：低剂量肺癌筛查CT,LDCT协议Meta description：低剂量肺癌筛查CT怎么做？本文梳理LDCT协议关键参数、剂量控制策略与质控要点，供影像技师与临床医生参考。"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "CT 对比剂用量与流速怎么定：增强扫描注射方案速查",
+      "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_06.html",
+      "datePublished": "2026-10-10",
+      "description": "关键词：CT对比剂用量,增强CT流速Meta description：CT增强扫描对比剂用量与流速怎么定？从体重、碘浓度、目标器官到通道选择，一文讲清通用原则与误区（参考值，遵本院协议）。"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "CTDIvol 与 DLP 怎么看：CT 辐射剂量报告解读",
+      "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_07.html",
+      "datePublished": "2026-10-10",
+      "description": "关键词：CTDIvol,DLP,CT辐射剂量Meta description：CT 剂量报告里的 CTDIvol 和 DLP 分别是什么、怎么算、怎么看？一文学会读懂辐射剂量条，做好剂量质控与迎检（参考）。"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "胸痛三联（Triple Rule-Out）一站式扫描方案",
+      "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_08.html",
+      "datePublished": "2026-10-10",
+      "description": "关键词：胸痛三联CT,triple rule out Meta description：胸痛三联CTA（冠脉+肺动脉+主动脉）怎么一次扫描完成？讲清适应证、心电门控、对比剂方案与图像质量要点（参考）。"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "小儿 CT 扫描如何降剂量：儿科协议调节 5 个要点",
+      "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_09.html",
+      "datePublished": "2026-10-10",
+      "description": "关键词：小儿CT剂量,儿科CT协议Meta description：儿童对辐射更敏感，小儿CT如何降剂量？从体重分档、自动管电流、管电压、扫描范围到图像重建，5 个要点讲清（参考）。"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "医学科研中的影像数据怎么整理：DICOM 脱敏与标注入门",
+      "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_10.html",
+      "datePublished": "2026-10-10",
+      "description": "关键词：DICOM脱敏,影像科研数据整理Meta description：做影像科研，DICOM 数据怎么脱敏、怎么整理、怎么标注？入门 step-by-step，兼顾合规与可复现（附科研支持）。"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">影</span>
+      <span>全球影像协议库</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="index.html">首页</a>
+      <a href="blog.html" aria-current="page">文章</a>
+      <a href="services.html">科研服务</a>
+      <a href="index_en.html" hreflang="en" lang="en">EN</a>
+      <a class="btn btn-primary nav-cta" href="services.html#contact">微信咨询</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">内容中心</p>
+      <h1 class="h1">把参数写清楚：CT 技术与影像科研文章</h1>
+      <p class="hero-lede">
+        每篇解决一个具体问题：参数怎么选、术语怎么对照、检查怎么做，以及影像数据怎么变成科研成果。
+        内容为公开资料整理的技术参考，不构成诊疗建议。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="#posts">从最新一篇读起</a>
+        <a class="btn btn-ghost btn-lg" href="#plan">看选题计划</a>
+      </div>
+
+      <dl class="stats">
+        <div>
+          <dt>已发布</dt>
+          <dd class="num">10</dd>
+        </div>
+        <div>
+          <dt>选题储备</dt>
+          <dd class="num">10</dd>
+        </div>
+        <div>
+          <dt>正文合计</dt>
+          <dd class="num">14K+</dd>
+        </div>
+        <div>
+          <dt>诊疗建议</dt>
+          <dd class="num">0</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section section--flush" id="posts">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h2">已发布文章</h2>
+        <p class="lede">按发布顺序排列。每篇文末都能直接跳到协议库与科研服务。</p>
+      </div>
+      <div class="post-list">
+      <article class="post">
+        <p class="post-kicker"><span>01</span><span>已发布</span><span>目标关键词：CT扫描参数、CT参数怎么选</span></p>
+        <h3><a href="blog/article_01.html">CT 扫描参数怎么选：kV、mA、层厚、螺距一次讲清</a></h3>
+        <p>影像技师入门必看：kV、mA、层厚、螺距、重建算法怎么选？一文讲清 CT 扫描参数对图像质量与辐射剂量的影响，附实用调节思路与参考值。</p>
+        <p class="post-foot">
+          <span>更新于 <span class="num">2026-10-10</span></span>
+          <span>约 <span class="num">3</span> 分钟</span>
+          <a class="more" href="blog/article_01.html">阅读全文</a>
+        </p>
+      </article>
+      <article class="post">
+        <p class="post-kicker"><span>02</span><span>已发布</span><span>目标关键词：GE西门子CT参数对照、CT参数术语对照</span></p>
+        <h3><a href="blog/article_02.html">GE / 西门子 / 飞利浦 / 联影 CT 参数术语对照表</a></h3>
+        <p>换了品牌设备看不懂参数名？GE、西门子、飞利浦、联影 CT 参数术语对照表：管电流、自动毫安、迭代重建、准直宽度一一对应，跨品牌上机不再懵。</p>
+        <p class="post-foot">
+          <span>更新于 <span class="num">2026-10-10</span></span>
+          <span>约 <span class="num">3</span> 分钟</span>
+          <a class="more" href="blog/article_02.html">阅读全文</a>
+        </p>
+      </article>
+      <article class="post">
+        <p class="post-kicker"><span>03</span><span>已发布</span><span>目标关键词：冠脉CTA扫描要点、冠脉CTA协议</span></p>
+        <h3><a href="blog/article_03.html">冠脉 CTA 扫描要点：心率、触发与重建期相全流程</a></h3>
+        <p>冠脉 CTA 扫描全要点：检查前心率控制、屏气训练、对比剂注射方案、触发时机、心电门控与重建期相选择，影像技师实操参考。</p>
+        <p class="post-foot">
+          <span>更新于 <span class="num">2026-10-10</span></span>
+          <span>约 <span class="num">3</span> 分钟</span>
+          <a class="more" href="blog/article_03.html">阅读全文</a>
+        </p>
+      </article>
+      <article class="post">
+        <p class="post-kicker"><span>04</span><span>已发布</span><span>目标关键词：影像技师职称考试、放射技师考试备考</span></p>
+        <h3><a href="blog/article_04.html">影像技师职称考试备考攻略（初级师 / 主管技师）</a></h3>
+        <p>关键词：影像技师职称考试, 放射技师考试备考Meta description：影像技师职称考试与放射技师考试备考攻略，覆盖初级师、主管技师考纲、高频考点、剂量对比剂复习与刷题方法。</p>
+        <p class="post-foot">
+          <span>更新于 <span class="num">2026-10-10</span></span>
+          <span>约 <span class="num">2</span> 分钟</span>
+          <a class="more" href="blog/article_04.html">阅读全文</a>
+        </p>
+      </article>
+      <article class="post">
+        <p class="post-kicker"><span>05</span><span>已发布</span><span>目标关键词：低剂量肺癌筛查CT、LDCT协议</span></p>
+        <h3><a href="blog/article_05.html">低剂量肺癌筛查 CT 怎么扫：LDCT 协议与剂量控制</a></h3>
+        <p>关键词：低剂量肺癌筛查CT,LDCT协议Meta description：低剂量肺癌筛查CT怎么做？本文梳理LDCT协议关键参数、剂量控制策略与质控要点，供影像技师与临床医生参考。</p>
+        <p class="post-foot">
+          <span>更新于 <span class="num">2026-10-10</span></span>
+          <span>约 <span class="num">3</span> 分钟</span>
+          <a class="more" href="blog/article_05.html">阅读全文</a>
+        </p>
+      </article>
+      <article class="post">
+        <p class="post-kicker"><span>06</span><span>已发布</span><span>目标关键词：CT对比剂用量、增强CT流速</span></p>
+        <h3><a href="blog/article_06.html">CT 对比剂用量与流速怎么定：增强扫描注射方案速查</a></h3>
+        <p>关键词：CT对比剂用量,增强CT流速Meta description：CT增强扫描对比剂用量与流速怎么定？从体重、碘浓度、目标器官到通道选择，一文讲清通用原则与误区（参考值，遵本院协议）。</p>
+        <p class="post-foot">
+          <span>更新于 <span class="num">2026-10-10</span></span>
+          <span>约 <span class="num">2</span> 分钟</span>
+          <a class="more" href="blog/article_06.html">阅读全文</a>
+        </p>
+      </article>
+      <article class="post">
+        <p class="post-kicker"><span>07</span><span>已发布</span><span>目标关键词：CTDIvol、DLP、CT辐射剂量</span></p>
+        <h3><a href="blog/article_07.html">CTDIvol 与 DLP 怎么看：CT 辐射剂量报告解读</a></h3>
+        <p>关键词：CTDIvol,DLP,CT辐射剂量Meta description：CT 剂量报告里的 CTDIvol 和 DLP 分别是什么、怎么算、怎么看？一文学会读懂辐射剂量条，做好剂量质控与迎检（参考）。</p>
+        <p class="post-foot">
+          <span>更新于 <span class="num">2026-10-10</span></span>
+          <span>约 <span class="num">1</span> 分钟</span>
+          <a class="more" href="blog/article_07.html">阅读全文</a>
+        </p>
+      </article>
+      <article class="post">
+        <p class="post-kicker"><span>08</span><span>已发布</span><span>目标关键词：胸痛三联CT、triple rule out</span></p>
+        <h3><a href="blog/article_08.html">胸痛三联（Triple Rule-Out）一站式扫描方案</a></h3>
+        <p>关键词：胸痛三联CT,triple rule out Meta description：胸痛三联CTA（冠脉+肺动脉+主动脉）怎么一次扫描完成？讲清适应证、心电门控、对比剂方案与图像质量要点（参考）。</p>
+        <p class="post-foot">
+          <span>更新于 <span class="num">2026-10-10</span></span>
+          <span>约 <span class="num">2</span> 分钟</span>
+          <a class="more" href="blog/article_08.html">阅读全文</a>
+        </p>
+      </article>
+      <article class="post">
+        <p class="post-kicker"><span>09</span><span>已发布</span><span>目标关键词：小儿CT剂量、儿科CT协议</span></p>
+        <h3><a href="blog/article_09.html">小儿 CT 扫描如何降剂量：儿科协议调节 5 个要点</a></h3>
+        <p>关键词：小儿CT剂量,儿科CT协议Meta description：儿童对辐射更敏感，小儿CT如何降剂量？从体重分档、自动管电流、管电压、扫描范围到图像重建，5 个要点讲清（参考）。</p>
+        <p class="post-foot">
+          <span>更新于 <span class="num">2026-10-10</span></span>
+          <span>约 <span class="num">1</span> 分钟</span>
+          <a class="more" href="blog/article_09.html">阅读全文</a>
+        </p>
+      </article>
+      <article class="post">
+        <p class="post-kicker"><span>10</span><span>已发布</span><span>目标关键词：DICOM脱敏、影像科研数据整理</span></p>
+        <h3><a href="blog/article_10.html">医学科研中的影像数据怎么整理：DICOM 脱敏与标注入门</a></h3>
+        <p>关键词：DICOM脱敏,影像科研数据整理Meta description：做影像科研，DICOM 数据怎么脱敏、怎么整理、怎么标注？入门 step-by-step，兼顾合规与可复现（附科研支持）。</p>
+        <p class="post-foot">
+          <span>更新于 <span class="num">2026-10-10</span></span>
+          <span>约 <span class="num">2</span> 分钟</span>
+          <a class="more" href="blog/article_10.html">阅读全文</a>
+        </p>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="plan">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h2">内容矩阵与选题计划</h2>
+        <p class="lede">
+          按搜索意图排的选题清单（每周 1-2 篇，先发布 1-3（已完稿，见 article_01-03.md）。）。已发布的先读，计划中的按顺序补齐。
+        </p>
+      </div>
+      <div class="prose">
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th>#</th><th>选题</th><th>目标关键词</th><th>搜索意图</th><th>状态</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td><a href="blog/article_01.html">CT 扫描参数怎么选：kV、mA、层厚、螺距一次讲清</a></td><td>CT扫描参数、CT参数怎么选</td><td>信息型（新手技师入门）</td><td><span class="tag tag--live">已发布</span></td></tr>
+              <tr><td>2</td><td><a href="blog/article_02.html">GE / 西门子 / 飞利浦 / 联影 CT 参数术语对照表</a></td><td>GE西门子CT参数对照、CT参数术语对照</td><td>信息型（跨品牌换岗/对照）</td><td><span class="tag tag--live">已发布</span></td></tr>
+              <tr><td>3</td><td><a href="blog/article_03.html">冠脉 CTA 扫描要点：心率控制、触发时机与重建期相</a></td><td>冠脉CTA扫描要点、冠脉CTA协议</td><td>信息型 + 操作指导</td><td><span class="tag tag--live">已发布</span></td></tr>
+              <tr><td>4</td><td><a href="blog/article_04.html">影像技师职称考试备考攻略（初级师/主管技师）</a></td><td>影像技师职称考试、放射技师考试备考</td><td>信息型（备考人群，流量大）</td><td><span class="tag tag--live">已发布</span></td></tr>
+              <tr><td>5</td><td><a href="blog/article_05.html">低剂量肺癌筛查 CT 怎么扫：LDCT 协议与剂量控制</a></td><td>低剂量肺癌筛查CT、LDCT协议</td><td>信息型（体检/筛查场景）</td><td><span class="tag tag--live">已发布</span></td></tr>
+              <tr><td>6</td><td><a href="blog/article_06.html">CT 对比剂用量与流速怎么定：增强扫描注射方案速查</a></td><td>CT对比剂用量、增强CT流速</td><td>信息型 + 速查工具型</td><td><span class="tag tag--live">已发布</span></td></tr>
+              <tr><td>7</td><td><a href="blog/article_07.html">CTDIvol 与 DLP 怎么看：CT 辐射剂量报告解读</a></td><td>CTDIvol、DLP、CT辐射剂量</td><td>信息型（剂量质控/迎检）</td><td><span class="tag tag--live">已发布</span></td></tr>
+              <tr><td>8</td><td><a href="blog/article_08.html">胸痛三联 CT（Triple Rule-Out）一站式扫描方案</a></td><td>胸痛三联CT、triple rule out</td><td>信息型（急诊/胸痛中心）</td><td><span class="tag tag--live">已发布</span></td></tr>
+              <tr><td>9</td><td><a href="blog/article_09.html">小儿 CT 扫描如何降剂量：儿科协议调节 5 个要点</a></td><td>小儿CT剂量、儿科CT协议</td><td>信息型（儿科影像）</td><td><span class="tag tag--live">已发布</span></td></tr>
+              <tr><td>10</td><td><a href="blog/article_10.html">医学科研中的影像数据怎么整理：DICOM 脱敏与标注入门</a></td><td>DICOM脱敏、影像科研数据整理</td><td>信息型 + 服务引流</td><td><span class="tag tag--live">已发布</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h2">文章没写到的，直接问</h2>
+        <p class="lede">
+          协议细节、参数取舍、影像数据整理与投稿问题，都可以带着具体情况来问。评估不收费。
+        </p>
+      </div>
+      <section class="article-cta">
+  <div class="wx-card">
+    <h2 class="h3">有具体问题想聊？</h2>
+    <p style="margin-top:0.7rem;font-size:0.92rem;color:var(--text-dim)">
+      影像组学、统计建模、图表绘制、Meta 分析与投稿返修支持。把研究设计与数据情况说清楚，
+      我们先判断可行性与工作量，评估不收费。
+    </p>
+    <p class="wx-label" style="margin-top:1.3rem">微信</p>
+    <div class="wx-id-row">
+      <span class="wx-id" id="wx-id">Zhuxiao0324</span>
+      <button
+        class="btn btn-ghost copy-btn"
+        type="button"
+        data-copy="Zhuxiao0324"
+        data-copy-state="copy-state"
+        data-label-idle="复制"
+        data-label-done="已复制">复制</button>
+    </div>
+    <p class="copy-state" id="copy-state" role="status" aria-live="polite"></p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="services.html#pricing">查看服务与报价</a>
+      <a class="btn btn-ghost" href="blog.html">返回文章索引</a>
+    </div>
+  </div>
+</section>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>全球影像协议库</h4>
+        <p>整理跨品牌 CT 扫描协议参考值，并提供医学科研方法学辅助服务。</p>
+      </div>
+      <div>
+        <h4>站点</h4>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="blog.html">技术文章</a></li>
+          <li><a href="services.html">医学科研服务</a></li>
+          <li><a href="index_en.html" lang="en" hreflang="en">English</a></li>
+          <li><a href="sitemap.xml">站点地图</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>协议库</h4>
+        <ul>
+          <li><a href="index.html#protocols">覆盖品牌</a></li>
+          <li><a href="index.html#fields">记录字段</a></li>
+          <li><a href="services.html#faq">常见问题</a></li>
+          <li><a href="services.html#compliance">合规声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>本站内容为科研参考信息，不构成诊疗建议。</span>
+      <span>微信：Zhuxiao0324</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
