@@ -1,0 +1,232 @@
+{
+  "brands": [
+    {
+      "id": "brand_ge",
+      "name": "GE Healthcare",
+      "code": "GE",
+      "country": "USA",
+      "region": "北美",
+      "market_share": "28%",
+      "tier": "tier1"
+    },
+    {
+      "id": "brand_siemens",
+      "name": "Siemens Healthineers",
+      "code": "SIEMENS",
+      "country": "Germany",
+      "region": "欧洲",
+      "market_share": "25%",
+      "tier": "tier1"
+    },
+    {
+      "id": "brand_philips",
+      "name": "Philips Healthcare",
+      "code": "PHILIPS",
+      "country": "Netherlands",
+      "region": "欧洲",
+      "market_share": "18%",
+      "tier": "tier1"
+    },
+    {
+      "id": "brand_uih",
+      "name": "United Imaging (联影)",
+      "code": "UIH",
+      "country": "China",
+      "region": "亚太",
+      "market_share": "8%",
+      "tier": "tier1"
+    },
+    {
+      "id": "brand_canon",
+      "name": "Canon Medical (佳能医疗)",
+      "code": "CANON",
+      "country": "Japan",
+      "region": "亚太",
+      "market_share": "12%",
+      "tier": "tier1",
+      "note": "原东芝医疗",
+      "models": {
+        "CT": [
+          {
+            "code": "aquilion_one",
+            "name": "Aquilion ONE",
+            "type": "高端",
+            "slices": 320
+          },
+          {
+            "code": "aquilion_prime",
+            "name": "Aquilion Prime",
+            "type": "中端",
+            "slices": 80
+          },
+          {
+            "code": "aquilion_lightning",
+            "name": "Aquilion Lightning",
+            "type": "入门",
+            "slices": 16
+          }
+        ],
+        "MRI": [
+          {
+            "code": "vantage_galan",
+            "name": "Vantage Galan",
+            "type": "高端",
+            "field_strength": 3.0
+          },
+          {
+            "code": "vantage_orian",
+            "name": "Vantage Orian",
+            "type": "中端",
+            "field_strength": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "brand_neusoft",
+      "name": "Neusoft (东软医疗)",
+      "code": "NEUSOFT",
+      "country": "China",
+      "region": "亚太",
+      "market_share": "4%",
+      "tier": "tier2",
+      "models": {
+        "CT": [
+          {
+            "code": "neuviz_epoch",
+            "name": "NeuViz Epoch",
+            "type": "高端",
+            "slices": 256
+          },
+          {
+            "code": "neuviz_glory",
+            "name": "NeuViz Glory",
+            "type": "中端",
+            "slices": 128
+          },
+          {
+            "code": "neuviz_prime",
+            "name": "NeuViz Prime",
+            "type": "入门",
+            "slices": 64
+          }
+        ],
+        "MRI": [
+          {
+            "code": "neuviz_mrd",
+            "name": "NeuViz MRD",
+            "type": "中端",
+            "field_strength": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "brand_samsung",
+      "name": "Samsung Healthcare (三星医疗)",
+      "code": "SAMSUNG",
+      "country": "South Korea",
+      "region": "亚太",
+      "market_share": "2%",
+      "tier": "tier2",
+      "note": "原Medison",
+      "models": {
+        "CT": [
+          {
+            "code": "somatom_perspective",
+            "name": "BodyTom",
+            "type": "移动CT",
+            "slices": 32
+          }
+        ],
+        "MRI": [
+          {
+            "code": "mr450w",
+            "name": "MR-450W",
+            "type": "中端",
+            "field_strength": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "brand_hitachi",
+      "name": "Hitachi Healthcare (日立医疗)",
+      "code": "HITACHI",
+      "country": "Japan",
+      "region": "亚太",
+      "market_share": "1.5%",
+      "tier": "tier2",
+      "models": {
+        "CT": [
+          {
+            "code": "scenaria_128",
+            "name": "Scenaria 128",
+            "type": "中端",
+            "slices": 128
+          }
+        ],
+        "MRI": [
+          {
+            "code": "echelon_smart",
+            "name": "Echelon Smart",
+            "type": "中端",
+            "field_strength": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "brand_sino",
+      "name": "SinoVision (赛诺威盛)",
+      "code": "SINOVISION",
+      "country": "China",
+      "region": "亚太",
+      "market_share": "0.8%",
+      "tier": "tier3",
+      "models": {
+        "CT": [
+          {
+            "code": "insitum_64",
+            "name": "Insitum 64",
+            "type": "中端",
+            "slices": 64
+          },
+          {
+            "code": "insitum_32",
+            "name": "Insitum 32",
+            "type": "入门",
+            "slices": 32
+          }
+        ]
+      }
+    },
+    {
+      "id": "brand_anke",
+      "name": "Anke (安科)",
+      "code": "ANKE",
+      "country": "China",
+      "region": "亚太",
+      "market_share": "0.5%",
+      "tier": "tier3",
+      "models": {
+        "CT": [
+          {
+            "code": "anatom_64",
+            "name": "Anatom 64",
+            "type": "中端",
+            "slices": 64
+          }
+        ],
+        "MRI": [
+          {
+            "code": "supermark_1_5t",
+            "name": "SuperMark 1.5T",
+            "type": "中端",
+            "field_strength": 1.5
+          }
+        ]
+      }
+    }
+  ]
+}
