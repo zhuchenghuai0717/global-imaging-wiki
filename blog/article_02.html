@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GE / 西门子 / 飞利浦 / 联影 CT 参数术语对照表 · 全球影像协议库</title>
+<meta name="description" content="换了品牌设备看不懂参数名？GE、西门子、飞利浦、联影 CT 参数术语对照表：管电流、自动毫安、迭代重建、准直宽度一一对应，跨品牌上机不再懵。">
+<meta name="keywords" content="GE西门子CT参数对照、CT参数术语对照">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_02.html">
+<link rel="stylesheet" href="../assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="全球影像协议库">
+<meta property="og:title" content="GE / 西门子 / 飞利浦 / 联影 CT 参数术语对照表">
+<meta property="og:description" content="换了品牌设备看不懂参数名？GE、西门子、飞利浦、联影 CT 参数术语对照表：管电流、自动毫安、迭代重建、准直宽度一一对应，跨品牌上机不再懵。">
+<meta property="og:url" content="https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_02.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23159aad'/><text x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='%2304121e'>影</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GE / 西门子 / 飞利浦 / 联影 CT 参数术语对照表",
+  "description": "换了品牌设备看不懂参数名？GE、西门子、飞利浦、联影 CT 参数术语对照表：管电流、自动毫安、迭代重建、准直宽度一一对应，跨品牌上机不再懵。",
+  "inLanguage": "zh-CN",
+  "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_02.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_02.html"
+  },
+  "datePublished": "2026-10-10",
+  "dateModified": "2026-10-10",
+  "isAccessibleForFree": true,
+  "author": {
+    "@type": "Organization",
+    "name": "全球影像协议库"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "全球影像协议库",
+    "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/"
+  },
+  "keywords": "GE西门子CT参数对照、CT参数术语对照"
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark" aria-hidden="true">影</span>
+      <span>全球影像协议库</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="../index.html">首页</a>
+      <a href="../blog.html" aria-current="page">文章</a>
+      <a href="../services.html">科研服务</a>
+      <a href="../index_en.html" hreflang="en" lang="en">EN</a>
+      <a class="btn btn-primary nav-cta" href="../services.html#contact">微信咨询</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap wrap--narrow">
+    <div class="article-head">
+      <nav class="crumbs" aria-label="面包屑">
+        <a href="../index.html">首页</a>
+        <span class="sep">/</span>
+        <a href="../blog.html">技术文章</a>
+        <span class="sep">/</span>
+        <span>正文</span>
+      </nav>
+      <a class="back-link" href="../blog.html">返回文章索引</a>
+    </div>
+
+    <div class="article-head">
+      <p class="eyebrow">技术文章</p>
+      <h1 class="h1">GE / 西门子 / 飞利浦 / 联影 CT 参数术语对照表</h1>
+      <p class="article-meta">
+        <span>主题 <span class="k">GE西门子CT参数对照、CT参数术语对照</span></span>
+        <span>更新于 <span class="k">2026-10-10</span></span>
+        <span>约 <span class="k">3</span> 分钟读完</span>
+      </p>
+    </div>
+
+    <nav class="toc" aria-label="本文目录">
+      <h2>本文目录</h2>
+      <ol><li><a href="#sec-1">一、管电流相关</a></li><li><a href="#sec-2">二、重建算法相关</a></li><li><a href="#sec-3">三、扫描几何相关</a></li><li><a href="#sec-4">四、剂量相关</a></li><li><a href="#sec-5">五、特殊功能名称对照</a></li><li><a href="#sec-6">六、实战建议</a></li></ol>
+    </nav>
+    <div class="prose">
+<p>同一台检查，GE 上叫 &quot;Smart mA&quot;，西门子叫 &quot;CARE Dose4D&quot;，飞利浦叫 &quot;DoseRight&quot;，换一家设备就像换了一门方言。本文把四大品牌常用参数术语逐条对照，帮你实现&quot;跨品牌秒上手&quot;。内容为技术参考，不同机型/软件版本界面可能略有差异。</p>
+<h2 id="sec-1">一、管电流相关</h2>
+<div class="table-scroll"><table><thead><tr><th>含义</th><th>GE</th><th>西门子</th><th>飞利浦</th><th>联影</th></tr></thead><tbody><tr><td>自动毫安技术</td><td>Smart mA / Auto mA</td><td>CARE Dose4D</td><td>DoseRight (ACS)</td><td>自动 mA</td></tr><tr><td>目标设定方式</td><td>噪声指数 NI</td><td>参考 mAs (ref mAs)</td><td>参考 mAs / DRI</td><td>目标噪声/参考 mA</td></tr><tr><td>手动毫安</td><td>mA</td><td>mAs</td><td>mAs</td><td>mA</td></tr></tbody></table></div>
+<p>要点：GE 用&quot;噪声指数&quot;反向控制，NI 越高允许噪声越大、剂量越低；西门子/飞利浦用&quot;参考 mAs&quot;正向设定，自动功能在此基础上按体型上下浮动。</p>
+<p>举个实例：同一个颅脑平扫协议，GE 上可能写作 &quot;Smart mA 200-400，NI 3.5&quot;，西门子写作 &quot;ref mAs 250&quot;，飞利浦写作 &quot;mAs 280&quot;（参考）。三者的自动毫安逻辑是相通的，都先拍定位像估算衰减，再按层面逐段分配毫安；区别只是技师设定的&quot;旋钮&quot;不同。换品牌时把旧机器的噪声水平或参考 mAs 记下来，到新机器上扫几例模体或常规病例对比，很快就能校准手感。</p>
+<h2 id="sec-2">二、重建算法相关</h2>
+<div class="table-scroll"><table><thead><tr><th>含义</th><th>GE</th><th>西门子</th><th>飞利浦</th><th>联影</th></tr></thead><tbody><tr><td>迭代重建</td><td>ASIR / ASIR-V</td><td>SAFIRE / ADMIRE</td><td>iDose⁴ / IMR</td><td>KARL 3D</td></tr><tr><td>强度档位</td><td>百分比（如 40%）</td><td>等级 1-5</td><td>等级 L1-L6 / 1-3</td><td>等级 1-5</td></tr><tr><td>卷积核</td><td>Kernel（Standard/Bone/Edge）</td><td>Kernel（H31s/Br40 等）</td><td>Filter（B/C/D/YA 等）</td><td>算法名（Soft/Bone 等）</td></tr></tbody></table></div>
+<p>要点：卷积核编号各家自成体系，不能按数字大小互相对照。例如西门子 H31s 是软组织平滑核，飞利浦的 &quot;B&quot; 大致对应软组织标准核，具体以厂家重建手册为准（参考）。</p>
+<h2 id="sec-3">三、扫描几何相关</h2>
+<ul><li>准直宽度：GE &quot;0.625mm × 64&quot;，西门子 &quot;0.6mm × 128&quot;，飞利浦 &quot;0.625mm × 64&quot;，探测器排数不同，写法含义相同：单排层厚 × 排数</li><li>螺距 Pitch：四家定义一致（床速/准直宽度），数值可直接对照</li><li>旋转时间：均为秒/圈，0.27-0.5 s 是常规范围（参考）</li></ul>
+<h2 id="sec-4">四、剂量相关</h2>
+<ul><li>剂量报告：四家均输出 CTDIvol（mGy）与 DLP（mGy·cm），定义遵循 IEC 标准，可直接横向比较</li><li>剂量调制曲线：GE &quot;Smart mA 曲线&quot;、西门子 &quot;Dose4D 体型曲线&quot;、飞利浦 &quot;DoseRight Index&quot;，都是按定位像衰减自动分配毫安，只是界面长得不一样</li></ul>
+<h2 id="sec-5">五、特殊功能名称对照</h2>
+<ul><li>双能/能谱：GE &quot;GSI 能谱成像&quot;，西门子 &quot;Dual Energy 双源双能&quot;，飞利浦 &quot;Spectral CT（探测器光谱）&quot;，联影 &quot;uCT 能谱&quot;，实现路线不同，GE/西门子靠球管侧，飞利浦靠探测器侧</li><li>心脏扫描模式：GE &quot;Cardiac Snapshot/Revolution&quot; 系列命名，西门子 &quot;Flash 大螺距/步进式前瞻性触发&quot;，飞利浦 &quot;Step &amp; Shoot Cardiac&quot;，联影 &quot;前瞻性心电门控&quot;</li><li>金属去伪影：GE &quot;Smart MAR&quot;，西门子 &quot;iMAR&quot;，飞利浦 &quot;O-MAR&quot;，联影 &quot;MAC&quot;（参考）</li></ul>
+<h2 id="sec-6">六、实战建议</h2>
+<ol><li>跨品牌对照时，先对照&quot;物理量&quot;（kV、mAs、层厚、螺距、旋转时间），再对照&quot;智能功能&quot;（自动毫安、迭代重建档位）。</li><li>迭代重建档位不要按数字照搬：西门子 ADMIRE 3 ≠ GE ASIR-V 30%，以图像噪声和诊断医生反馈为准。</li><li>本站协议库已把 41+ 个常用协议在四品牌下的参数并排展示，省去翻手册的时间：<a href="https://zhuchenghuai0717.github.io/global-imaging-wiki/">Global Imaging Wiki 协议库</a></li></ol>
+<blockquote><p>免责声明：本文为科普/技术参考，不构成诊疗建议；参数名与界面随软件版本可能变化，请以设备厂家说明书为准。</p></blockquote>
+    </div>
+
+<section class="article-cta">
+  <div class="wx-card">
+    <h2 class="h3">需要把影像数据变成文章？</h2>
+    <p style="margin-top:0.7rem;font-size:0.92rem;color:var(--text-dim)">
+      影像组学、统计建模、图表绘制、Meta 分析与投稿返修支持。把研究设计与数据情况说清楚，
+      我们先判断可行性与工作量，评估不收费。
+    </p>
+    <p class="wx-label" style="margin-top:1.3rem">微信</p>
+    <div class="wx-id-row">
+      <span class="wx-id" id="wx-id">Zhuxiao0324</span>
+      <button
+        class="btn btn-ghost copy-btn"
+        type="button"
+        data-copy="Zhuxiao0324"
+        data-copy-state="copy-state"
+        data-label-idle="复制"
+        data-label-done="已复制">复制</button>
+    </div>
+    <p class="copy-state" id="copy-state" role="status" aria-live="polite"></p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="../services.html#pricing">查看服务与报价</a>
+      <a class="btn btn-ghost" href="../blog.html">返回文章索引</a>
+    </div>
+  </div>
+</section>
+
+    <div class="article-foot">
+      <span><a href="article_01.html">上一篇：CT 扫描参数怎么选：kV、mA、层厚、螺距一次讲清</a></span>
+      <span><a href="article_03.html">下一篇：冠脉 CTA 扫描要点：心率、触发与重建期相全流程</a></span>
+      <a href="../blog.html">全部文章</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>全球影像协议库</h4>
+        <p>整理跨品牌 CT 扫描协议参考值，并提供医学科研方法学辅助服务。</p>
+      </div>
+      <div>
+        <h4>站点</h4>
+        <ul>
+          <li><a href="../index.html">首页</a></li>
+          <li><a href="../blog.html">技术文章</a></li>
+          <li><a href="../services.html">医学科研服务</a></li>
+          <li><a href="../index_en.html" lang="en" hreflang="en">English</a></li>
+          <li><a href="../sitemap.xml">站点地图</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>协议库</h4>
+        <ul>
+          <li><a href="../index.html#protocols">覆盖品牌</a></li>
+          <li><a href="../index.html#fields">记录字段</a></li>
+          <li><a href="../services.html#faq">常见问题</a></li>
+          <li><a href="../services.html#compliance">合规声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>本站内容为科研参考信息，不构成诊疗建议。</span>
+      <span>微信：Zhuxiao0324</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
