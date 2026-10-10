@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CT 血管成像（CTA）团注跟踪怎么做：阈值、延时与常见坑 · 全球影像协议库</title>
+<meta name="description" content="关键词：CTA团注跟踪, bolus tracking Meta description：CTA团注跟踪怎么做？详解ROI、触发阈值、触发后延时与bolus tracking常见坑，供影像技师参考。">
+<meta name="keywords" content="">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_11.html">
+<link rel="stylesheet" href="../assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="全球影像协议库">
+<meta property="og:title" content="CT 血管成像（CTA）团注跟踪怎么做：阈值、延时与常见坑">
+<meta property="og:description" content="关键词：CTA团注跟踪, bolus tracking Meta description：CTA团注跟踪怎么做？详解ROI、触发阈值、触发后延时与bolus tracking常见坑，供影像技师参考。">
+<meta property="og:url" content="https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_11.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23159aad'/><text x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='%2304121e'>影</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "CT 血管成像（CTA）团注跟踪怎么做：阈值、延时与常见坑",
+  "description": "关键词：CTA团注跟踪, bolus tracking Meta description：CTA团注跟踪怎么做？详解ROI、触发阈值、触发后延时与bolus tracking常见坑，供影像技师参考。",
+  "inLanguage": "zh-CN",
+  "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_11.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_11.html"
+  },
+  "datePublished": "2026-10-10",
+  "dateModified": "2026-10-10",
+  "isAccessibleForFree": true,
+  "author": {
+    "@type": "Organization",
+    "name": "全球影像协议库"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "全球影像协议库",
+    "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark" aria-hidden="true">影</span>
+      <span>全球影像协议库</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="../index.html">首页</a>
+      <a href="../blog.html" aria-current="page">文章</a>
+      <a href="../services.html">科研服务</a>
+      <a href="../index_en.html" hreflang="en" lang="en">EN</a>
+      <a class="btn btn-primary nav-cta" href="../services.html#contact">微信咨询</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap wrap--narrow">
+    <div class="article-head">
+      <nav class="crumbs" aria-label="面包屑">
+        <a href="../index.html">首页</a>
+        <span class="sep">/</span>
+        <a href="../blog.html">技术文章</a>
+        <span class="sep">/</span>
+        <span>正文</span>
+      </nav>
+      <a class="back-link" href="../blog.html">返回文章索引</a>
+    </div>
+
+    <div class="article-head">
+      <p class="eyebrow">技术文章</p>
+      <h1 class="h1">CT 血管成像（CTA）团注跟踪怎么做：阈值、延时与常见坑</h1>
+      <p class="article-meta">
+        <span>更新于 <span class="k">2026-10-10</span></span>
+        <span>约 <span class="k">4</span> 分钟读完</span>
+      </p>
+    </div>
+
+    <nav class="toc" aria-label="本文目录">
+      <h2>本文目录</h2>
+      <ol><li><a href="#sec-1">CT 血管成像（CTA）团注跟踪怎么做：阈值、延时与常见坑</a></li><li><a href="#sec-2">一、先理解：CTA团注跟踪在跟踪什么</a></li><li><a href="#sec-3">二、ROI：放对位置比阈值更重要</a></li><li><a href="#sec-4">三、阈值：没有万能数字</a></li><li><a href="#sec-5">四、触发后延时：决定“扫得准不准”</a></li><li><a href="#sec-6">五、注射与监测参数</a></li><li><a href="#sec-7">六、常见坑</a></li><li><a href="#sec-8">七、实战流程小结</a></li></ol>
+    </nav>
+    <div class="prose">
+<p>关键词：CTA团注跟踪, bolus tracking Meta description：CTA团注跟踪怎么做？详解ROI、触发阈值、触发后延时与bolus tracking常见坑，供影像技师参考。</p>
+<h2 id="sec-1">CT 血管成像（CTA）团注跟踪怎么做：阈值、延时与常见坑</h2>
+<h2 id="sec-2">一、先理解：CTA团注跟踪在跟踪什么</h2>
+<p>CTA团注跟踪（bolus tracking）是在注射对比剂后，对目标血管固定层面做低剂量连续监测。当 ROI 内 CT 值达到预设阈值，系统自动触发诊断扫描。它比固定延时更个体化，适合循环时间差异大的患者。与团注测试（test bolus）相比，bolus tracking 更省对比剂和步骤，但更依赖 ROI、阈值、呼吸配合和心功能状态。本文仅作技术科普，不构成诊疗建议。</p>
+<h2 id="sec-3">二、ROI：放对位置比阈值更重要</h2>
+<p>ROI 应放在目标血管腔中心，避开钙化、支架、金属、上腔静脉高浓度对比剂和血管壁。主动脉 CTA 常放升主动脉或降主动脉，头颈 CTA 可放颈总动脉近段或主动脉弓，肺动脉 CTA 常放肺动脉干，具体按方案调整。ROI 大小约 1-2 cm²（参考）。太小噪声大，太大易受邻近结构平均。监测层面应选对比剂较早到达且适合触发的层面，并考虑诊断扫描方向。若监测层面与扫描起始层面距离远，触发后延时需相应调整。</p>
+<h2 id="sec-4">三、阈值：没有万能数字</h2>
+<p>触发阈值常用 100-150 HU（参考），但不同部位、kV、体型和基线 CT 值都会影响。肺动脉 CTA 可更低，如 80-100 HU（参考），但要警惕右心对比剂未充分混匀。阈值低易提前触发，动脉强化不足；阈值高可能错过峰值，静脉污染加重。建议先看平扫或监测基线，再结合目标血管和目标强化设定。心输出量低、瓣膜病、肺动脉高压等会改变达峰时间，必须个体化。所有数值需按设备与本地规范调整。</p>
+<h2 id="sec-5">四、触发后延时：决定“扫得准不准”</h2>
+<p>阈值触发只说明对比剂到达监测层，不代表远端血管已充盈。触发后延时给扫描床移动、屏气和对比剂分布留时间。胸主动脉 CTA 常用 2-5 s，头颈 CTA 2-4 s，肺动脉 CTA 0-3 s，腹部 CTA 4-8 s（均参考）。若扫描方向从足向头或头向足，延时要匹配。循环异常患者不能机械复制，应结合监测曲线、临床状态和既往经验调整。</p>
+<h2 id="sec-6">五、注射与监测参数</h2>
+<p>对比剂浓度常用 300-400 mgI/mL，流率 3-5 mL/s，总量 60-100 mL，盐水冲管 30-50 mL（参考），具体按体重、部位、心肾功能和本地方案。监测序列应低剂量：低 kV、低 mAs、1-2 s 间隔（参考），并在满足触发识别的前提下尽量缩小范围。诊断扫描可用自动管电流、迭代重建、低 kV（体型允许）等降低剂量。辐射与对比剂风险需权衡，本文不构成诊疗建议。</p>
+<h2 id="sec-7">六、常见坑</h2>
+<ol><li>ROI 被钙化、支架或高浓度上腔静脉干扰，出现假高值提前触发。</li><li>阈值设太高，触发太晚，动脉期变静脉期。</li><li>阈值设太低，触发太早，目标血管强化不足。</li><li>忽略心功能、三尖瓣反流、肺动脉高压、休克等循环异常。</li><li>监测层面选错，如肺动脉 CTA 放到主动脉，或腹部 CTA 未覆盖目标血管。</li><li>触发后延时与扫描方向、屏气指令不匹配。</li><li>呼吸运动使 ROI 移出血管，曲线失真。</li><li>静脉通路小、外渗或注射侧不合适，影响上腔静脉伪影和触发。</li><li>只盯自动触发，不观察监测图像，异常时不会手动触发。</li><li>监测序列剂量过高，增加不必要辐射。</li></ol>
+<h2 id="sec-8">七、实战流程小结</h2>
+<p>检查前核对适应证、过敏史、肾功能和静脉通路。连接高压注射器，选择监测层面，放置 ROI，设阈值和触发后延时。注射对比剂后密切看监测图像；触发后给屏气指令并扫描。若曲线异常，及时手动触发或调整。扫描后记录参数和问题，便于复盘。多练习、多复盘，比死记阈值更可靠。</p>
+<p>CTA团注跟踪的核心是：ROI 放对、阈值合理、延时匹配、观察到位。更多 CTA、CT 和 MRI 协议模板与参数速查，欢迎进入站内协议库首页：https://zhuchenghuai0717.github.io/global-imaging-wiki/</p>
+    </div>
+
+<section class="article-cta">
+  <div class="wx-card">
+    <h2 class="h3">需要把影像数据变成文章？</h2>
+    <p style="margin-top:0.7rem;font-size:0.92rem;color:var(--text-dim)">
+      影像组学、统计建模、图表绘制、Meta 分析与投稿返修支持。把研究设计与数据情况说清楚，
+      我们先判断可行性与工作量，评估不收费。
+    </p>
+    <p class="wx-label" style="margin-top:1.3rem">微信</p>
+    <div class="wx-id-row">
+      <span class="wx-id" id="wx-id">Zhuxiao0324</span>
+      <button
+        class="btn btn-ghost copy-btn"
+        type="button"
+        data-copy="Zhuxiao0324"
+        data-copy-state="copy-state"
+        data-label-idle="复制"
+        data-label-done="已复制">复制</button>
+    </div>
+    <p class="copy-state" id="copy-state" role="status" aria-live="polite"></p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="../services.html#pricing">查看服务与报价</a>
+      <a class="btn btn-ghost" href="../blog.html">返回文章索引</a>
+    </div>
+  </div>
+</section>
+
+    <div class="article-foot">
+      <span><a href="article_10.html">上一篇：医学科研中的影像数据怎么整理：DICOM 脱敏与标注入门</a></span>
+      <a href="../blog.html">全部文章</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>全球影像协议库</h4>
+        <p>整理跨品牌 CT 扫描协议参考值，并提供医学科研方法学辅助服务。</p>
+      </div>
+      <div>
+        <h4>站点</h4>
+        <ul>
+          <li><a href="../index.html">首页</a></li>
+          <li><a href="../blog.html">技术文章</a></li>
+          <li><a href="../services.html">医学科研服务</a></li>
+          <li><a href="../index_en.html" lang="en" hreflang="en">English</a></li>
+          <li><a href="../sitemap.xml">站点地图</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>协议库</h4>
+        <ul>
+          <li><a href="../index.html#protocols">覆盖品牌</a></li>
+          <li><a href="../index.html#fields">记录字段</a></li>
+          <li><a href="../services.html#faq">常见问题</a></li>
+          <li><a href="../services.html#compliance">合规声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>本站内容为科研参考信息，不构成诊疗建议。</span>
+      <span>微信：Zhuxiao0324</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
