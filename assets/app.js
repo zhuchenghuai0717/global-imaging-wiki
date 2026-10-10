@@ -46,3 +46,12 @@ function renderDetail(){
     <table><thead>${head}</thead><tbody>${rows}</tbody></table>
     <p class="muted">参数为参考值，实际请以设备厂商官方手册与本单位协议为准。</p>`;
 }
+
+document.addEventListener("click",(e)=>{
+  const t=e.target;
+  if(t&&t.id==="copywx"){
+    const wx="Zhuxiao0324";
+    const done=()=>{t.textContent="已复制 ✓  微信："+wx;};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(wx).then(done).catch(done);}else{done();}
+  }
+});
