@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CT 扫描参数怎么选：kV、mA、层厚、螺距一次讲清 · 全球影像协议库</title>
+<meta name="description" content="影像技师入门必看：kV、mA、层厚、螺距、重建算法怎么选？一文讲清 CT 扫描参数对图像质量与辐射剂量的影响，附实用调节思路与参考值。">
+<meta name="keywords" content="CT扫描参数、CT参数怎么选">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_01.html">
+<link rel="stylesheet" href="../assets/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="全球影像协议库">
+<meta property="og:title" content="CT 扫描参数怎么选：kV、mA、层厚、螺距一次讲清">
+<meta property="og:description" content="影像技师入门必看：kV、mA、层厚、螺距、重建算法怎么选？一文讲清 CT 扫描参数对图像质量与辐射剂量的影响，附实用调节思路与参考值。">
+<meta property="og:url" content="https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_01.html">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23159aad'/><text x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='%2304121e'>影</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "CT 扫描参数怎么选：kV、mA、层厚、螺距一次讲清",
+  "description": "影像技师入门必看：kV、mA、层厚、螺距、重建算法怎么选？一文讲清 CT 扫描参数对图像质量与辐射剂量的影响，附实用调节思路与参考值。",
+  "inLanguage": "zh-CN",
+  "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_01.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zhuchenghuai0717.github.io/global-imaging-wiki/blog/article_01.html"
+  },
+  "datePublished": "2026-10-10",
+  "dateModified": "2026-10-10",
+  "isAccessibleForFree": true,
+  "author": {
+    "@type": "Organization",
+    "name": "全球影像协议库"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "全球影像协议库",
+    "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/"
+  },
+  "keywords": "CT扫描参数、CT参数怎么选"
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark" aria-hidden="true">影</span>
+      <span>全球影像协议库</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="../index.html">首页</a>
+      <a href="../blog.html" aria-current="page">文章</a>
+      <a href="../services.html">科研服务</a>
+      <a href="../index_en.html" hreflang="en" lang="en">EN</a>
+      <a class="btn btn-primary nav-cta" href="../services.html#contact">微信咨询</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap wrap--narrow">
+    <div class="article-head">
+      <nav class="crumbs" aria-label="面包屑">
+        <a href="../index.html">首页</a>
+        <span class="sep">/</span>
+        <a href="../blog.html">技术文章</a>
+        <span class="sep">/</span>
+        <span>正文</span>
+      </nav>
+      <a class="back-link" href="../blog.html">返回文章索引</a>
+    </div>
+
+    <div class="article-head">
+      <p class="eyebrow">技术文章</p>
+      <h1 class="h1">CT 扫描参数怎么选：kV、mA、层厚、螺距一次讲清</h1>
+      <p class="article-meta">
+        <span>主题 <span class="k">CT扫描参数、CT参数怎么选</span></span>
+        <span>更新于 <span class="k">2026-10-10</span></span>
+        <span>约 <span class="k">3</span> 分钟读完</span>
+      </p>
+    </div>
+
+    <nav class="toc" aria-label="本文目录">
+      <h2>本文目录</h2>
+      <ol><li><a href="#sec-1">一、管电压 kV：决定穿透力和对比度</a></li><li><a href="#sec-2">二、管电流 mA：图像噪声的主要开关</a></li><li><a href="#sec-3">三、层厚与重建间隔：薄层是趋势</a></li><li><a href="#sec-4">四、螺距 Pitch：速度与剂量的跷跷板</a></li><li><a href="#sec-5">五、重建算法与迭代重建</a></li><li><a href="#sec-6">实用口诀</a></li></ol>
+    </nav>
+    <div class="prose">
+<p>刚上机的技师最常问的问题就是：&quot;这个部位参数到底怎么设？&quot;其实 CT 参数调节有清晰的逻辑：先明确临床需求，再在图像质量和辐射剂量之间找平衡。本文把五个核心参数的调节思路一次讲清。本文为技术参考，具体协议请以科室规范和设备说明书为准。</p>
+<h2 id="sec-1">一、管电压 kV：决定穿透力和对比度</h2>
+<p>kV 影响 X 射线的穿透能力。常规成人检查多用 120 kV，这是图像质量和剂量之间的折中点。</p>
+<p>调节思路：</p>
+<ul><li>体胖患者、肩部等厚部位：升到 140 kV 保证穿透（参考）</li><li>儿童、瘦小患者、增强扫描：降到 100 甚至 80 kV，既可降剂量，又能提高碘对比剂的对比度（参考）</li><li>能谱 CT 上 kV 切换由设备自动完成，技师只需选对模式</li></ul>
+<h2 id="sec-2">二、管电流 mA：图像噪声的主要开关</h2>
+<p>mA（或有效 mAs）直接决定光子数量，光子越少图像噪声越大。现在各品牌都有自动毫安技术：</p>
+<ul><li>GE 叫 Smart mA / Auto mA，设定噪声指数（NI）</li><li>西门子叫 CARE Dose4D，设定参考 mAs（ref mAs）</li><li>飞利浦叫 DoseRight，联影叫自动 mA</li></ul>
+<p>日常操作建议：平扫颅脑可用较低 mA，腹部等软组织对比要求高的部位适当提高。体胖患者交给自动毫安补偿即可，不必手动猛加。</p>
+<h2 id="sec-3">三、层厚与重建间隔：薄层是趋势</h2>
+<ul><li>常规诊断层厚：颅脑 5 mm，胸腹部 5 mm 诊断层 + 1 mm 左右薄层（参考）</li><li>薄层（≤1 mm）用于三维重建、MPR、小病灶检出</li><li>重建间隔一般不大于层厚，重叠重建（如层厚 5 mm、间隔 3 mm）有利于小病灶显示，但图像数量增加</li></ul>
+<h2 id="sec-4">四、螺距 Pitch：速度与剂量的跷跷板</h2>
+<p>螺距 = 床速 / 准直宽度。螺距大则扫描快、剂量低，但图像噪声略增、部分容积效应略明显。</p>
+<ul><li>胸腹部屏气扫描：螺距可放到 1.0-1.5，缩短屏气时间（参考）</li><li>颅脑、内耳等精细结构：螺距收小（0.5-0.8），图像更细腻（参考）</li><li>双源 CT 高螺距模式（Flash）可达 3 以上，适合无法配合屏气的患者</li></ul>
+<h2 id="sec-5">五、重建算法与迭代重建</h2>
+<ul><li>软组织算法（Standard/Soft）：颅脑、腹部</li><li>骨算法（Bone/Edge）：骨窗、肺间质、内耳</li><li>各家的迭代重建（GE ASIR-V、西门子 ADMIRE、飞利浦 iDose⁴/IMR、联影 KARL 3D）可以在低剂量下压制噪声，强度档位数越高降噪越强，但过高会让图像&quot;塑料感&quot;变重，一般从中档开始用（参考）</li></ul>
+<h2 id="sec-6">实用口诀</h2>
+<p>先选 kV 定基调，自动毫安保噪声；薄层给三维，螺距看配合；迭代重建中档起步。新手最快的成长路径，是照着成熟协议扫、再逐条理解每个参数为什么是这个值。</p>
+<p>本站协议库已整理 41+ 个常见检查在 GE / 西门子 / 飞利浦 / 联影四品牌下的参考参数，可直接对照查询：<a href="https://zhuchenghuai0717.github.io/global-imaging-wiki/">Global Imaging Wiki 协议库</a></p>
+<blockquote><p>免责声明：本文为科普/技术参考，不构成诊疗建议；文中数值均为参考值，实际扫描方案请遵循科室协议与设备厂家说明。</p></blockquote>
+    </div>
+
+<section class="article-cta">
+  <div class="wx-card">
+    <h2 class="h3">需要把影像数据变成文章？</h2>
+    <p style="margin-top:0.7rem;font-size:0.92rem;color:var(--text-dim)">
+      影像组学、统计建模、图表绘制、Meta 分析与投稿返修支持。把研究设计与数据情况说清楚，
+      我们先判断可行性与工作量，评估不收费。
+    </p>
+    <p class="wx-label" style="margin-top:1.3rem">微信</p>
+    <div class="wx-id-row">
+      <span class="wx-id" id="wx-id">Zhuxiao0324</span>
+      <button
+        class="btn btn-ghost copy-btn"
+        type="button"
+        data-copy="Zhuxiao0324"
+        data-copy-state="copy-state"
+        data-label-idle="复制"
+        data-label-done="已复制">复制</button>
+    </div>
+    <p class="copy-state" id="copy-state" role="status" aria-live="polite"></p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="../services.html#pricing">查看服务与报价</a>
+      <a class="btn btn-ghost" href="../blog.html">返回文章索引</a>
+    </div>
+  </div>
+</section>
+
+    <div class="article-foot">
+      <span><a href="article_02.html">下一篇：GE / 西门子 / 飞利浦 / 联影 CT 参数术语对照表</a></span>
+      <a href="../blog.html">全部文章</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>全球影像协议库</h4>
+        <p>整理跨品牌 CT 扫描协议参考值，并提供医学科研方法学辅助服务。</p>
+      </div>
+      <div>
+        <h4>站点</h4>
+        <ul>
+          <li><a href="../index.html">首页</a></li>
+          <li><a href="../blog.html">技术文章</a></li>
+          <li><a href="../services.html">医学科研服务</a></li>
+          <li><a href="../index_en.html" lang="en" hreflang="en">English</a></li>
+          <li><a href="../sitemap.xml">站点地图</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>协议库</h4>
+        <ul>
+          <li><a href="../index.html#protocols">覆盖品牌</a></li>
+          <li><a href="../index.html#fields">记录字段</a></li>
+          <li><a href="../services.html#faq">常见问题</a></li>
+          <li><a href="../services.html#compliance">合规声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>本站内容为科研参考信息，不构成诊疗建议。</span>
+      <span>微信：Zhuxiao0324</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
