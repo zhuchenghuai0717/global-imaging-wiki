@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Imaging Protocol Library · Cross-vendor CT protocol reference</title>
+<meta name="description" content="Reference CT scanning parameters for GE HealthCare, Siemens Healthineers, Philips, Canon Medical and United Imaging scanners, collected in one place for radiographers and imaging researchers.">
+<meta name="keywords" content="CT protocol,radiography,cross-vendor CT,CTDIvol,DLP,radiomics,research support">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://zhuchenghuai0717.github.io/global-imaging-wiki/index_en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://zhuchenghuai0717.github.io/global-imaging-wiki/">
+<link rel="alternate" hreflang="en" href="https://zhuchenghuai0717.github.io/global-imaging-wiki/index_en.html">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
+<link rel="stylesheet" href="assets/site.css">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Global Imaging Protocol Library">
+<meta property="og:title" content="Global Imaging Protocol Library · Cross-vendor CT protocol reference">
+<meta property="og:description" content="CT protocol reference parameters for five major scanner vendors, plus research methodology support.">
+<meta property="og:url" content="https://zhuchenghuai0717.github.io/global-imaging-wiki/index_en.html">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23159aad'/><text x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='%2304121e'>影</text></svg>">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://zhuchenghuai0717.github.io/global-imaging-wiki/index_en.html#website",
+      "name": "Global Imaging Protocol Library",
+      "alternateName": "全球影像协议库",
+      "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/index_en.html",
+      "inLanguage": "en",
+      "description": "Cross-vendor CT protocol reference values for radiographers and imaging researchers."
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://zhuchenghuai0717.github.io/global-imaging-wiki/index_en.html#dataset",
+      "name": "Cross-vendor CT scanning protocol reference dataset",
+      "description": "Reference CT protocol parameters for GE HealthCare, Siemens Healthineers, Philips, Canon Medical and United Imaging scanners, covering slice geometry, exposure settings, reconstruction, contrast administration and dose metrics.",
+      "url": "https://zhuchenghuai0717.github.io/global-imaging-wiki/index_en.html",
+      "inLanguage": "en",
+      "isAccessibleForFree": true
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index_en.html">
+      <span class="brand-mark" aria-hidden="true">影</span>
+      <span>Global Imaging Protocol Library</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index_en.html" aria-current="page">Home</a>
+      <a href="#library">Library</a>
+      <a href="#vendors">Vendors</a>
+      <a href="services.html" hreflang="zh-CN" lang="zh-CN">中文</a>
+      <a class="btn btn-primary nav-cta" href="#contact">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">For radiographers and imaging researchers</p>
+        <h1 class="h1">Cross-vendor CT protocols, side by side</h1>
+        <p class="hero-lede">
+          Reference scanning parameters for five major scanner vendors, collected in one place so you can compare setups without digging through manuals.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#library">Browse the library</a>
+          <a class="btn btn-ghost btn-lg" href="#contact">Get in touch</a>
+        </div>
+
+        <dl class="stats">
+          <div>
+            <dt>Vendors covered</dt>
+            <dd class="num">5</dd>
+          </div>
+          <div>
+            <dt>Protocol entries</dt>
+            <dd class="num">41+</dd>
+          </div>
+          <div>
+            <dt>Recorded fields</dt>
+            <dd class="num">8</dd>
+          </div>
+          <div>
+            <dt>Clinical advice</dt>
+            <dd class="num">0</dd>
+          </div>
+        </dl>
+      </div>
+
+      <aside class="hero-panel" aria-label="Library structure">
+        <div class="hero-panel-head">
+          <span>Library structure</span>
+          <span>Grouped by region</span>
+        </div>
+        <ul class="hero-list">
+          <li><span class="idx num">01</span><span class="label">Head and neck</span></li>
+          <li><span class="idx num">02</span><span class="label">Chest and lung</span></li>
+          <li><span class="idx num">03</span><span class="label">Abdomen and pelvis</span></li>
+          <li><span class="idx num">04</span><span class="label">Cardiac and CTA</span></li>
+          <li><span class="idx num">05</span><span class="label">Spine and musculoskeletal</span></li>
+          <li><span class="idx num">06</span><span class="label">Low-dose screening</span></li>
+        </ul>
+        <div class="hero-panel-foot">
+          All values are reference figures compiled from public sources. Follow your own department protocol for clinical scanning.
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="library">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h2">What each protocol entry records</h2>
+        <p class="lede">
+          Fields were chosen so an entry can be read straight off the console. Where a vendor does not publish a value, the field is left empty rather than estimated.
+        </p>
+      </div>
+
+      <dl class="field-grid">
+        <div>
+          <dt>Scan geometry</dt>
+          <dd>Slice thickness, interval, pitch, reconstructed thickness</dd>
+        </div>
+        <div>
+          <dt>Exposure</dt>
+          <dd>Tube voltage, tube current, rotation time, automatic exposure control range</dd>
+        </div>
+        <div>
+          <dt>Reconstruction</dt>
+          <dd>Reconstruction algorithm, kernel, iterative reconstruction level</dd>
+        </div>
+        <div>
+          <dt>Contrast</dt>
+          <dd>Volume, concentration, flow rate, injection method, scan delay</dd>
+        </div>
+        <div>
+          <dt>Dose metrics</dt>
+          <dd>CTDIvol and DLP reference values for comparing protocols</dd>
+        </div>
+        <div>
+          <dt>Timing</dt>
+          <dd>Scan time and breath-hold requirement</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="vendors">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h2">Vendors covered</h2>
+        <p class="lede">
+          Naming conventions and factory defaults differ widely between vendors. Lining them up saves time during equipment migration and protocol review.
+        </p>
+      </div>
+
+      <div class="bento">
+        <article class="cell cell--tint">
+          <h3 class="h3">GE HealthCare</h3>
+          <p>Routine, contrast-enhanced and angiographic protocol references.</p>
+        </article>
+        <article class="cell cell--tint">
+          <h3 class="h3">Siemens Healthineers</h3>
+          <p>Acquisition and reconstruction parameters grouped by body region.</p>
+        </article>
+        <article class="cell cell--tint">
+          <h3 class="h3">Philips</h3>
+          <p>Includes low-dose settings and iterative reconstruction levels.</p>
+        </article>
+        <article class="cell cell--half cell--accent">
+          <h3 class="h3">Canon Medical</h3>
+          <p>Body and cardiac protocols, with contrast volume and flow rate ranges where published.</p>
+        </article>
+        <article class="cell cell--half cell--accent">
+          <h3 class="h3">United Imaging</h3>
+          <p>Reference values for United Imaging scanners, useful when comparing against imported systems.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="research">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h2">Research methodology support</h2>
+        <p class="lede">
+          If you have imaging data and need help turning it into a manuscript, we assist with study design, statistics, figure preparation and reviewer responses. Six service lines, indicative pricing published.
+        </p>
+      </div>
+
+      <div class="bento">
+        <article class="cell cell--half cell--accent">
+          <h3 class="h3">Analysis and statistics</h3>
+          <p>Radiomics pipelines, statistical modelling, figure production, meta-analysis and revision support.</p>
+          <div class="hero-actions" style="margin-top:1.25rem">
+            <a class="btn btn-primary" href="services.html" hreflang="zh-CN" lang="zh-CN">View services</a>
+          </div>
+        </article>
+        <article class="cell cell--half cell--grid">
+          <h3 class="h3">Scope first, then decide</h3>
+          <p>Describe your study design and data and we will assess feasibility and effort before any commitment. Assessment is free.</p>
+          <div class="hero-actions" style="margin-top:1.25rem">
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="muted" style="margin-top:1.25rem;font-size:0.88rem;max-width:70ch">
+        Service pages and pricing are currently published in Chinese. An English version is in preparation. Contact us and we will correspond in English.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h2">Frequently asked</h2>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>Is this a clinical decision tool?</summary>
+          <p>No. The library is a research and reference resource. It does not provide diagnostic advice, and it does not replace your department protocol or a radiologist's judgement.</p>
+        </details>
+        <details>
+          <summary>Where do the reference values come from?</summary>
+          <p>Publicly available vendor documentation and peer-reviewed literature. Every entry is a reference value, and fields with no published source are left blank on purpose.</p>
+        </details>
+        <details>
+          <summary>Can I reuse the dataset?</summary>
+          <p>The library is free to read. For redistribution, derivative datasets or commercial use, contact us first so we can confirm the terms and the source attributions.</p>
+        </details>
+        <details>
+          <summary>Do you write manuscripts?</summary>
+          <p>No. We do not ghostwrite or submit on your behalf. We assist with methodology, statistics, figures and responses to reviewer comments. The author remains responsible for the content and the submission.</p>
+        </details>
+      </div>
+
+      <div class="callout" style="margin-top:2.5rem">
+        <h3>Scope of service</h3>
+        <ul>
+          <li>Research methodology and data processing support only. No diagnosis, no treatment recommendations.</li>
+          <li>No ghostwriting, no journal submission on your behalf, no guarantee of acceptance.</li>
+          <li>Studies involving human participants require ethics approval and informed consent obtained by the investigator.</li>
+          <li>Send de-identified data only. Do not transmit personally identifiable information.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2 class="h2">Tell us what you are working on</h2>
+        <p class="lede">
+          Describe your study or the data you have. We will tell you whether it is feasible and what it would take. Assessment is free.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="wx-card">
+        <p class="wx-label">WeChat ID</p>
+        <div class="wx-id-row">
+          <span class="wx-id" id="wx-id">Zhuxiao0324</span>
+          <button
+            class="btn btn-ghost copy-btn"
+            type="button"
+            data-copy="Zhuxiao0324"
+            data-copy-state="copy-state"
+            data-label-idle="Copy"
+            data-label-done="Copied">Copy</button>
+        </div>
+        <p class="copy-state" id="copy-state" role="status" aria-live="polite"></p>
+
+        <dl class="contact-facts" style="margin-top:1.4rem">
+          <div>
+            <dt>Response time</dt>
+            <dd>Within 24 hours on business days</dd>
+          </div>
+          <div>
+            <dt>Working mode</dt>
+            <dd>Remote collaboration, cross-institution welcome</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Global Imaging Protocol Library</h4>
+        <p>Cross-vendor CT protocol reference values, plus research methodology support for imaging studies.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index_en.html">Home</a></li>
+          <li><a href="services.html" hreflang="zh-CN" lang="zh-CN">科研服务</a></li>
+          <li><a href="index.html" hreflang="zh-CN" lang="zh-CN">中文首页</a></li>
+          <li><a href="sitemap.xml">Sitemap</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Library</h4>
+        <ul>
+          <li><a href="#library">Recorded fields</a></li>
+          <li><a href="#vendors">Vendors</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>Reference information for research use. Not clinical advice.</span>
+      <span>WeChat: Zhuxiao0324</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
