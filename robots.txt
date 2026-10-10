@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zhuchenghuai0717.github.io/global-imaging-wiki/sitemap.xml
